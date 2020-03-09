@@ -33,8 +33,5 @@ public class Hello
 		  String response = "Hi Patryk, this is Hello from HTML"; 
 		  return response;
 	  }
-	 
-
-	
 	
 }
