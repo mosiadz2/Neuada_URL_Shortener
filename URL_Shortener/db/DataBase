@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS URLS;
+
+CREATE TABLE URLS 
+(
+	longUrl VARCHAR(2048) NOT NULL PRIMARY KEY,
+	shortUrl VARCHAR(10) NOT NULL,
+);
+
+INSERT INTO URLs VALUES ('asdasdadfdsfasdfasdf','asasss');
+
+select * from URLs
