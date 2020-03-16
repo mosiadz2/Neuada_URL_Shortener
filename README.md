@@ -1,5 +1,11 @@
 # Neuada_URL_Shortener
- 
+
+<br/>Contributor: Patryk Mosiezny.
+<br/>App functionality: 
+Generate short alphanumeric value from given long URL and saves it into persistent database.
+Retreive the long URL by giving generated short URL
+Checking if Long URL already exists in database. 
+
 IDE used: Eclipse Version: 2019-12 (4.14.0)
 <br/>Server for REST API Used: Apache Tomcat Version 9.0.16
 <br/>Database: HSQLDB Version 2.5.0
