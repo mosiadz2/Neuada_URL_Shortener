@@ -93,7 +93,6 @@ public class Parser
 		if(inLongUrl)
 		{
 			String s = event.getText();
-			System.out.print(s);
 			currentUrlShortener.setLongUrl(s);
 		}
 		if(inShortUrl)

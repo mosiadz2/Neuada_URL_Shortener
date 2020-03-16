@@ -26,8 +26,8 @@ public class UrlShortenerResources
 	
 	@GET
 	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON, MediaType.TEXT_XML})
-	@Path("{urlShortenerLongUrl}")
-	public UrlShortener getUrlShortener(@PathParam("urlShortenerShortUrl") String _shortUrl)
+	@Path("{urlShortenershortUrl}")
+	public UrlShortener getUrlShortener(@PathParam("urlShortenershortUrl") String _shortUrl)
 	{
 		return UrlShortenerDAO.instance.getUrlShortener(_shortUrl);
 	}
@@ -42,9 +42,7 @@ public class UrlShortenerResources
 			@FormParam("shortUrl") String shortUrl,
 			@Context HttpServletResponse servletResponse) throws IOException 
 	{
-		System.out.println("Inside POST longURL = " + longUrl);
-		System.out.println("shortUrl = " + shortUrl);
-
+		
 		UrlShortener url = new UrlShortener();
 		url.setLongUrl(longUrl);
 		url.setShortUrl(shortUrl);

@@ -44,5 +44,8 @@ GRANT DBA TO SA
 SET SCHEMA SYSTEM_LOBS
 INSERT INTO BLOCKS VALUES(0,2147483647,0)
 SET SCHEMA PUBLIC
-INSERT INTO URLS VALUES('https://www.google.com/search?q=puppy&rlz=1C1CHBF_enIE881IE881&sxsrf=ALeKk03lOMzCJh94xCgxZw9dr4SJfTKwVA:1583606139857&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjNrLjLgInoAhXkpHEKHfcADc4Q_AUoAXoECBIQAw&biw=1920&bih=969#imgrc=AC2bVhmqa4roWM','69n4mU')
-INSERT INTO URLS VALUES('null','69n4mU')
+INSERT INTO URLS VALUES('www.google.com/search?q=cats&rlz=1C1CHBF_enIE881IE881&sxsrf=ALeKk00hDkAI5c1vXQI2JDAPTh1mpQXmhA:1584234139611&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiQn4eJpJvoAhWGZxUIHQcWC9AQ_AUoAXoECCUQAw#imgrc=DGPjeja1JKT8CM','prq2sz')
+INSERT INTO URLS VALUES('www.google.com/search?q=dogs&rlz=1C1CHBF_enIE881IE881&sxsrf=ALeKk00VAIOUilimzj8mA_EpJqmwPY4Hug:1584220711955&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiOpaCG8proAhWZTRUIHYXvBJwQ_AUoAXoECBoQAw#BFsdqM','CqmAiJ')
+INSERT INTO URLS VALUES('www.google.com/search?q=dogs&rlz=1C1CHBF_enIE881IE881&sxsrf=ALeKk00VAIOUilimzj8mA_EpJqmwPY4Hug:1584220711955&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiOpaCG8proAhWZTRUIHYXvBJwQ_AUoAXoECBoQAw#imgrc=fWpHkCILBFsdqM','o50A9i')
+INSERT INTO URLS VALUES('www.google.com/search?q=puppy&rlz=1C1CHBF_enIE881IE881&sxsrf=ALeKk03lOMzCJh94xCgxZw9dr4SJfTKwVA:1583606139857&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjNrLjLgInoAhXkpHEKHfcADc4Q_AUoAXoECBIQAw&biw=1920&bih=969#imgrc=AC2bVhmqa4roWM','Hjo1O7')
+INSERT INTO URLS VALUES('www.google.com/search?q=puppy&rlz=1C1CHBF_enIE881IE881&sxsrf=ALeKk03lOMzCJh94xCgxZw9dr4SJfTKwVA:1583606139857&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjNrLjLgInoAhXkpHEKHfcADc4Q_AUoAXoECBIQAw&biw=1920&bih=969#imgrc=IkQKQ8MvAg3oJM','JkVo0J')

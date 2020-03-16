@@ -16,44 +16,7 @@ public enum UrlShortenerDAO
 
 	private Map<String, UrlShortener> urlMap = new HashMap<String, UrlShortener>();
 	
-	private UrlShortenerDAO()
-	{
-		Connection con = null;
-		Statement stmt = null;
-		ResultSet result = null;
-
-		try {
-			// Registering the HSQLDB JDBC driver
-			Class.forName("org.hsqldb.jdbc.JDBCDriver");
-			// Creating the connection with HSQLDB
-			con = DriverManager.getConnection("jdbc:hsqldb:hsql://localhost", "sa", "");
-			
-			if (con != null) 
-			{
-				System.out.println("Connection created successfully");
-
-			} else 
-			{
-				System.out.println("Problem with creating connection");
-			}
-
-			stmt = con.createStatement();
-			result = stmt.executeQuery("SELECT * FROM \"PUBLIC\".\"URLS\"");
-
-			while (result.next()) 
-			{
-				UrlShortener url = new UrlShortener();
-				url.setLongUrl(result.getString("longUrl"));
-				url.setShortUrl(result.getString("shortUrl"));
-				urlMap.put(url.getLongUrl(), url);
-			}
-
-		} catch (Exception e) 
-		{
-			e.printStackTrace(System.out);
-		}
-	}
-	
+	//connecting with the HSQL database and adding orginal URL and generated ahort URL
 	public void createUrlEntry(UrlShortener url) 
 	{
 		Connection con = null;
@@ -78,6 +41,7 @@ public enum UrlShortenerDAO
 		urlMap.put(url.getLongUrl(), url);
 	}
 	
+	//Retreiving the values from the database and adding to the list
 	public List<UrlShortener> getUrlShortener() 
 	{
 		urlMap.clear();
@@ -110,7 +74,7 @@ public enum UrlShortenerDAO
 				UrlShortener url = new UrlShortener();
 				url.setLongUrl(result.getString("longUrl"));
 				url.setShortUrl(result.getString("shortUrl"));
-				urlMap.put(url.getShortUrl(), url);
+				urlMap.put(url.getLongUrl(), url);
 			}
 
 		} 
@@ -124,32 +88,9 @@ public enum UrlShortenerDAO
 		return url;
 	}
 
-	public UrlShortener getUrlShortener(String _shortUrl) 
+	public UrlShortener getUrlShortener(String _longUrl) 
 	{
-		return urlMap.get(_shortUrl);
-	}
-	
-	public void SelectQuery(UrlShortener url)
-	{
-		   
-		      Connection con = null;
-		      Statement stmt = null;
-		      ResultSet result = null;
-		      
-		      try {
-		         Class.forName("org.hsqldb.jdbc.JDBCDriver");
-		         con = DriverManager.getConnection("jdbc:hsqldb:hsql://localhost", "sa", "");
-		         stmt = con.createStatement();
-		         result = stmt.executeQuery("SELECT longUrl, shortUrl, FROM Urls WHERE shortUrl = '" + url.getShortUrl() + "'");
-
-		         while(result.next())
-		         {
-		             System.out.println(result.getString("longUrl")+" |"+result.getString("shortUrl"));
-		          }
-		         
-		      } catch (Exception e) {
-		         e.printStackTrace(System.out);
-		      }
+		return urlMap.get(_longUrl);
 	}
 
 }

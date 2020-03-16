@@ -1,3 +1,6 @@
+///getters and setters function 
+
+
 package myApp;
 
 import javax.xml.bind.annotation.XmlRootElement;
